@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang ="en">
+    <head>
+        <meta charset ="utf-8">
+        <title>Angular Services Invoice</title>
+        <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel='stylesheet' />
+        <link rel ='stylesheet'  href = 'style.css'/>
+        
+    <head>
+    <body>
+        <form id ='main' ng-app ng-controller ='myServices'>
+            <h1>My Services</h1>
+            <ul id ='services'>
+                <li ng-repeat = 'service in services'>
+                    <label>
+                        <input type ='checkbox' ng-model='service.selected' value ='1' name ={{service.title}}/>
+                        {{service.title}}<span>KES  {{service.price}}</span>
+                    </label>
+                
+                </li>
+            </ul>
+            <p id ='total'>Total: <span>KES  {{total()}}</span></p>
+            <input type="submit" id="order" value="Order"/>
+        </form>
+        <script src ='../js/angular-1.0.7.js'></script>
+        <script src ='../js/services.js'></script>
+        
+    </body>
+</html>
+        

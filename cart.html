@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang ="en" ng-app='myApp'>
+    <head>
+        <meta charset = "utf-8">
+        <title> Shopping Cart</title>
+        <link rel ="stylesheet" href ='css/bootstrap.min.css' type ='text/css'/>
+        
+    </head>
+    <body>
+        <div ng-controller= 'CartController'>
+            <h1>Your Order</h1>
+            <div ng-repeat = 'item in items'>
+                <span>{{item.title}}</span>
+                <input ng-model = 'item.quantity'>
+                <span>{{item.price | currency}}</span>
+                <span>{{item.price * item.quantity |currency}}</span>
+                <button ng-click= 'remove($index)'>Remove</button>
+            </div>
+    
+        </div>
+    
+    
+    
+    
+    
+    
+        <script src = 'js/angular-1.0.7.js' type ='text/javascript'></script>
+        <script src = 'js/cart.js' type ='text/javascript'></script>
+    </body>
+</html>
