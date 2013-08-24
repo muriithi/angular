@@ -3,6 +3,7 @@ function myServices($scope) {
         {title: 'web development', price: 200},
         {title: 'web design', price: 250},
         {title: 'photography', price: 100},
+	{title: 'Croissant', price : 25},
         { title: 'coffee drinking', price: 10}
     ];
     $scope.total = function() {
