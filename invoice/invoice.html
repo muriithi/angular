@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang ="en"ng-app >
+    <head> 
+        <meta charset ="utf-8">
+        <title>Angular Invoice</title>
+        
+    </head>
+    <body>
+        <div ng-controller ="InvoiceCntl">
+            <b>Invoice : </b>
+            <table>
+                <tr>
+                    <th>Quantity</th>
+                    <th>Cost</th>
+                </tr>
+                <tr>
+                    <td><input type ='number' step = '1' min ='0' ng-pattern="/\d+/" ng-model ='quantity'></td>
+                    <td><input type ='number' ng-model = "cost" required></input></td>
+        
+                </tr>
+                
+            </table>
+            <hr>
+                <b> Total :</b>{{quantity * cost | currency}}
+                
+        </div>    
+        <script src = "../js/angular-1.0.7.min.js"></script>
+        <script src = "invoice.js"></script>
+    </body>
+</html>
